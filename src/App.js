@@ -1,33 +1,26 @@
 
 import './App.css';
-import React from 'react';
+import React, {Component} from 'react';
 
-function Holamundo(props) {
-  return(
-    <div id="hola">
-      <h3>{props.subtitulo}</h3>
-      {props.texto}
+import tareas from "./sample/tareas.json";
+import Tasks from "./components/Tasks";
+
+console.log(tareas);
+class App extends Component{
+
+  estado={
+    tareas:tareas
+  }
+
+  render(){
+    return <div>
+      <Tasks tarea={this.estado.tareas}/>
+      {/* <Tasks desc={this.estado.desc}/>
+      <Tasks terminado={this.estado.terminado}/>
+      <Tasks id={this.estado.id}/> */}
     </div>
-  );
+  }
 }
 
-// const App = () => <div>El componente: <Holamundo/></div>
-
-// class App extends React.Component{
-//   render(){
-//     return <div>El componente: <Holamundo/></div>
-//   }
-// }
-
-function App() {
-  return (
-    <div>
-      El Componente: 
-      <Holamundo texto="Hola Sck" subtitulo="subTitulo1"/>
-      <Holamundo texto="Hola Manuelito"/>
-      <Holamundo texto="Hola Mayra"/>
-    </div>
-  );
-}
 
 export default App;

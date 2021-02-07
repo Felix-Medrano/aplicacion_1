@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "titulo": "Tarea 1",
+        "descripcion": "Tarea de Prueba 1",
+        "terminado": false 
+    },
+    {
+        "id": 1,
+        "titulo": "Tarea 2",
+        "descripcion": "Tarea de Prueba 2",
+        "terminado": false 
+    },
+    {
+        "id": 2,
+        "titulo": "Tarea 3",
+        "descripcion": "Tarea de Prueba 3",
+        "terminado": false 
+    }
+]
