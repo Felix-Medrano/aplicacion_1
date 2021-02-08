@@ -1,10 +1,10 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
 class Task extends Component{
-
+  
     Completado(){
         return{
-            // TODO: Continuar en 2:00:00
             fontSize: '20px',
             color: this.props.tarea.terminado ? 'gray' : 'red',
             textDecoration: this.props.tarea.terminado ? 'line-through' : 'none'
@@ -18,12 +18,16 @@ class Task extends Component{
             {tarea.descripcion} / 
             {tarea.terminado} / 
             {tarea.id}
-            <input type="checkbox"/>
-            <button style={btnBorrar}>
+            <input type="checkbox" onChange={this.props.terminado.bind(this, tarea.id)}/>
+            <button style={btnBorrar} onClick = {this.props.eliminarTarea.bind(this, tarea.id)} >
                 X
             </button>
         </p>
     }
+}
+
+Task.propTypes = {
+    tarea: PropTypes.object.isRequired
 }
 
 const btnBorrar ={
